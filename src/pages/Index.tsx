@@ -1,8 +1,6 @@
-
 import { useEffect, useRef, useState } from 'react';
 import Navigation from '../components/Navigation';
-import Avatar from '../components/Avatar';
-import HolographicPanels from '../components/HolographicPanels';
+import ModelWithPanels from '../components/ModelWithPanels';
 import ParticleField from '../components/ParticleField';
 import CircuitBackground from '../components/CircuitBackground';
 import ScrollPrompt from '../components/ScrollPrompt';
@@ -51,19 +49,26 @@ const Index = () => {
           {/* Hero Section */}
           <div className="space-y-8">
             {/* Main Title */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-tech font-bold text-white neon-text glitch-text" data-text="CYBER DEV">
-                <span className="text-cyber-blue">CYBER</span>{' '}
-                <span className="text-cyber-green">DEV</span>
+            <div className="space-y-4 mt-[15vh]">
+              <h1 className="text-5xl md:text-7xl font-tech font-bold text-white neon-text glitch-text" data-text="PORTAL :// Sarthak">
+                <span className="text-cyber-blue">PORTAL</span>{' '}
+                <span className="text-cyber-green">://</span>{' '}
+                <span className="text-cyber-violet">Sarthak</span>
               </h1>
               <p className="text-xl md:text-2xl text-cyber-blue font-mono tracking-wider">
                 &gt; Initializing Neural Interface...
               </p>
+              <p className="text-xl md:text-2xl text-cyber-violet font-mono tracking-wider">
+                &gt; Loading Portfolio.exe...
+              </p>
             </div>
 
-            {/* Avatar Section */}
-            <div className="flex justify-center my-16">
-              <Avatar mousePosition={mousePosition} />
+            {/* Model with Interactive Panels */}
+            <div className="flex justify-center my-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-transparent to-cyber-darker opacity-80" />
+                <ModelWithPanels />
+              </div>
             </div>
 
             {/* Subtitle */}
@@ -76,9 +81,6 @@ const Index = () => {
               </p>
             </div>
           </div>
-
-          {/* Holographic Skill Panels */}
-          <HolographicPanels />
         </div>
       </main>
 
